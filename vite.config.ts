@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "./",
-  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.gif'],
+  // assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.gif'],
 })

@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Icon } from "@iconify/react";
+import myPhoto from './assets/my-photo.png'
 function Portfolio() {
   const icons = [
     { id: 1, name: "devicon:github", tooltip: "Github",link:"https://www.github.com/prakhillohiya" },
@@ -71,7 +72,7 @@ function Portfolio() {
     >
       <div className="mt-4 w-[inherit] flex items-center flex-col">
         <img
-          src={`${"./src/assets/my-photo.png"}`}
+          src={myPhoto}
           alt={"prakhillohiya"}
           loading="lazy"
           className="rounded-full h-[150px] w-[150px]  border-[5px] border-solid border-gray-300 drop-shadow-md"
