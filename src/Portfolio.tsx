@@ -1,13 +1,9 @@
-import React from "react";
+
 import Grid from "@mui/material/Unstable_Grid2";
 import {
-  Badge,
   Box,
   Button,
   IconButton,
-  ImageListItem,
-  Link,
-  Paper,
   Tooltip,
   Typography,
 } from "@mui/material";
@@ -31,7 +27,7 @@ function Portfolio() {
   const handleDownload = async () => {
     try {
       const fileName = "clp9kxpvl0tgk5499gr501lpf.pdf";
-      const URL="http://localhost:3001/proxy"
+      const URL="https://bit.ly/prakhillohiya"
       const response = await fetch(URL);
       // const contentDisposition = response.headers.get("content-disposition");
 
