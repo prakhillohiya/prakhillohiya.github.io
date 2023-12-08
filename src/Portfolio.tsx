@@ -27,22 +27,12 @@ function Portfolio() {
 
   const handleDownload = async () => {
     try {
-      const fileName = "clp9kxpvl0tgk5499gr501lpf.pdf";
-      const URL="https://bit.ly/prakhillohiya"
+      const fileName = "Prakhil_Lohiya.pdf";
+      const URL="https://myproxyserver.cyclic.app/resume"
       const response = await fetch(URL);
-      // const contentDisposition = response.headers.get("content-disposition");
 
-      // if (!contentDisposition) {
-      //   throw new Error("Content-Disposition header is missing.");
-      // }
-
-      // const fileName = contentDisposition.split("filename=")[1];
-
-      // if (!fileName) {
-      //   throw new Error("Unable to determine the file name.");
-      // }
       const blob = await response.blob();
-      console.log(blob);
+
 
       const tempAnchor = document.createElement("a");
       tempAnchor.href = window.URL.createObjectURL(blob);
