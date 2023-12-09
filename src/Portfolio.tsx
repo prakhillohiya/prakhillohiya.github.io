@@ -1,16 +1,13 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import {
   Box,
-  Button,
   IconButton,
-  Link,
   Typography,
   Tooltip,
   Fab,
 } from "@mui/material";
 import { Icon } from "@iconify/react";
 import myPhoto from "./assets/my-photo.png";
-import { XButton } from "./components/XButton";
 import { useState } from "react";
 // import {
 //   Tooltip,

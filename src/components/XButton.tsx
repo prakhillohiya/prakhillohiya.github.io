@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 
-export function XButton({loading,onClick,children}) {
+interface IXButton{
+  loading:boolean
+  onClick:()=>void,
+  children:JSX.Element
+}
+
+export function XButton({loading,onClick,children}:IXButton) {
 
   const handleOnClick=()=>{
     onClick()
