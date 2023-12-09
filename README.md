@@ -69,9 +69,9 @@ Here are some ideas to get you started:
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=css" height="40" alt="css3 logo"  />
   <img width="12" />
- <img  height="40" src="https://img.icons8.com/color/96/cloud-function.png" alt="swagger"/>
+ <img  height="45" src="https://img.icons8.com/color/96/cloud-function.png" alt="swagger"/>
 <img width="12" />
-  <img height="40" src="https://img.icons8.com/color/48/net-framework.png" alt="net-framework"/>
+  <img height="45" src="https://img.icons8.com/color/48/net-framework.png" alt="net-framework"/>
 </div>
 
 ###
