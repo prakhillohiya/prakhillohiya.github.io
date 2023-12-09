@@ -57,8 +57,6 @@ Here are some ideas to get you started:
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=cs" height="40" alt="csharp logo"  />
   <img width="12" />
-  <img src="https://skillicons.dev/icons?i=express" height="40" alt="express logo"  />
-  <img width="12" />
   <img src="https://cdn.simpleicons.org/angular/DD0031" height="40" alt="angularjs logo"  />
   <img width="12" />
   <img src="https://cdn.simpleicons.org/html5/E34F26" height="40" alt="html5 logo"  />
