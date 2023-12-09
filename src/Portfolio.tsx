@@ -174,7 +174,7 @@ function Portfolio() {
           {icons.map((i) => (
             <Grid xs={4} key={i.id} sx={{ width: "fit-content" }}>
               <Tooltip title={i.tooltip} arrow>
-                <IconButton href={i.link} target="_blank">
+                <IconButton href={i.link} target="_blank" rel="noopener">
                   <Icon icon={i.name} width="40" height="40" />
                 </IconButton>
               </Tooltip>
