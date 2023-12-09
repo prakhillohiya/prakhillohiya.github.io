@@ -1,47 +1,112 @@
-
 import Grid from "@mui/material/Unstable_Grid2";
 import {
   Box,
   Button,
   IconButton,
-  Tooltip,
+  Link,
   Typography,
+  Tooltip,
+  Fab,
 } from "@mui/material";
 import { Icon } from "@iconify/react";
-import myPhoto from './assets/my-photo.png'
+import myPhoto from "./assets/my-photo.png";
+import { XButton } from "./components/XButton";
+import { useState } from "react";
+// import {
+//   Tooltip,
+//   TooltipContent,
+//   TooltipProvider,
+//   TooltipTrigger,
+// } from "@/components/ui/tooltip";
 function Portfolio() {
+  const [loading, setLoading] = useState(false);
   const icons = [
-    { id: 1, name: "devicon:github", tooltip: "Github",link:"https://www.github.com/prakhillohiya" },
-    { id: 2, name: "logos:facebook", tooltip: "Facebook",link:"https://www.facebook.com/prakhillohiya" },
-    { id: 3, name: "logos:twitter", tooltip: "Twitter",link:"https://www.twitter.com/prakhil_lohiya" },
-    { id: 4, name: "logos:reddit-icon", tooltip: "Reddit",link:"https://www.reddit.com/user/prakhillohiya" },
-    { id: 5, name: "skill-icons:discord", tooltip: "Discord",link:"https://discord.com/users/717400041630990446"},
-    { id: 6, name: "logos:google-gmail", tooltip: "Gmail",link:"mailto:prakhillohiya@gmail.com" },
-    { id: 7, name: "devicon:linkedin", tooltip: "LinkedIn",link:"https://www.linkedin.com/in/prakhillohiya" },
-    { id: 8, name: "logos:telegram", tooltip: "Telegram",link:"https://t.me/prakhillohiya" },
-    { id: 9, name: "logos:whatsapp-icon", tooltip: "Whatsapp",link:"https://wa.me/9024306056" },
-    { id: 10, name: "skill-icons:instagram", tooltip: "Instagram",link:"https://www.instagram.com/prakhillohiya" },
-    { id: 11, name: "icon-park:phone-call", tooltip: "Phone",link:"tel:+919024306056" },
-        // { id: 11, name: "devicon:slack", tooltip: "Slack",link:"" },
+    {
+      id: 1,
+      name: "devicon:github",
+      tooltip: "Github",
+      link: "https://www.github.com/prakhillohiya",
+    },
+    {
+      id: 2,
+      name: "logos:facebook",
+      tooltip: "Facebook",
+      link: "https://www.facebook.com/prakhillohiya",
+    },
+    {
+      id: 3,
+      name: "logos:twitter",
+      tooltip: "Twitter",
+      link: "https://www.twitter.com/prakhil_lohiya",
+    },
+    {
+      id: 4,
+      name: "logos:reddit-icon",
+      tooltip: "Reddit",
+      link: "https://www.reddit.com/user/prakhillohiya",
+    },
+    {
+      id: 5,
+      name: "skill-icons:discord",
+      tooltip: "Discord",
+      link: "https://discord.com/users/717400041630990446",
+    },
+    {
+      id: 6,
+      name: "logos:google-gmail",
+      tooltip: "Gmail",
+      link: "mailto:prakhillohiya@gmail.com",
+    },
+    {
+      id: 7,
+      name: "devicon:linkedin",
+      tooltip: "LinkedIn",
+      link: "https://www.linkedin.com/in/prakhillohiya",
+    },
+    {
+      id: 8,
+      name: "logos:telegram",
+      tooltip: "Telegram",
+      link: "https://t.me/prakhillohiya",
+    },
+    {
+      id: 9,
+      name: "logos:whatsapp-icon",
+      tooltip: "Whatsapp",
+      link: "https://wa.me/9024306056",
+    },
+    {
+      id: 10,
+      name: "skill-icons:instagram",
+      tooltip: "Instagram",
+      link: "https://www.instagram.com/prakhillohiya",
+    },
+    {
+      id: 11,
+      name: "icon-park:phone-call",
+      tooltip: "Phone",
+      link: "tel:+919024306056",
+    },
+    // { id: 11, name: "devicon:slack", tooltip: "Slack",link:"" },
   ];
 
   const handleDownload = async () => {
     try {
+      setLoading(true)
       const fileName = "Prakhil_Lohiya.pdf";
-      const URL="https://myproxyserver.cyclic.app/resume"
+      const URL = "https://myproxyserver.cyclic.app/resume";
       const response = await fetch(URL);
 
       const blob = await response.blob();
-
 
       const tempAnchor = document.createElement("a");
       tempAnchor.href = window.URL.createObjectURL(blob);
       tempAnchor.download = fileName;
 
       tempAnchor.click();
-
-      document.body.removeChild(tempAnchor);
+      setLoading(false)
     } catch (error) {
+      setLoading(false)
       console.error("Error downloading file:", error);
     }
   };
@@ -72,11 +137,31 @@ function Portfolio() {
         </Typography>
       </div>
       <div className="p-4 flex justify-center">
-        <Tooltip title="Download Resume" arrow placement="right">
-          <Button variant="contained" onClick={handleDownload}>
-            Hire Me
-          </Button>
-        </Tooltip>
+        <Fab
+          color="primary"
+          aria-label="download-resume"
+          variant="extended"
+          className="glow"
+          onClick={handleDownload}
+          disabled={loading}
+        >
+          {!loading ? (
+            <Icon
+              icon="uil:down-arrow"
+              width="24"
+              height="24"
+              className="m-[6px]"
+            />
+          ) : (
+            <Icon
+              icon="prime:spinner"
+              width="24"
+              height="24"
+              className="animate-spin m-[6px]"
+            />
+          )}
+          Resume
+        </Fab>
       </div>
       <div className="flex-grow">
         <Grid
