@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<h1 align="center">Hey 👋, My name is Prakhil Lohiya</h1>
+<h1 align="left">Hey 👋, My name is Prakhil Lohiya</h1>
 
 ###
 
