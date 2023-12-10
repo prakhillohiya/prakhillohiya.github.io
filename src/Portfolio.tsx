@@ -129,8 +129,11 @@ function Portfolio() {
           loading="lazy"
           className="rounded-full h-[150px] w-[150px]  border-[5px] border-solid border-gray-300 drop-shadow-md"
         />
-        <Typography variant="h6" padding={"1rem"}>
-          Software Development Engineer
+        <Typography variant="h5" padding={"1rem"}>
+          Prakhil Lohiya
+        </Typography>
+        <Typography variant="h6" >
+          (Software Development Engineer)
         </Typography>
       </div>
       <div className="p-4 flex justify-center">
