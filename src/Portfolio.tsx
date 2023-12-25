@@ -7,7 +7,7 @@ import {
   Fab,
 } from "@mui/material";
 import { Icon } from "@iconify/react";
-import myPhoto from "./assets/my-photo.png";
+import myPhoto from "./assets/my-photo.jpg";
 import { useState } from "react";
 // import {
 //   Tooltip,
